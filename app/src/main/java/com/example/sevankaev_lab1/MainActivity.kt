@@ -12,6 +12,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.sevankaev_lab1.ui.theme.Sevankaev_Lab1Theme
+import com.example.sevankaev_lab1.TestClass
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,10 +21,12 @@ class MainActivity : ComponentActivity() {
         setContent {
             Sevankaev_Lab1Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
+                    val testText = TestClass("Hello Seva!")
                     Greeting(
-                        name = "Andrey Sevankaev",
+                        name = testText.toUpperCase(),
                         modifier = Modifier.padding(innerPadding)
                     )
+
                 }
             }
         }
