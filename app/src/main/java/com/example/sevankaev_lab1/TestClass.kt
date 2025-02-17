@@ -10,6 +10,10 @@ class TestClass (private var text: String){
         return text
     }
 
+    fun getLoverText(): String {
+        return text
+    }
+
     // Метод для подсчета количества слов в тексте
     fun wordCount(): Int {
         return text.split("\\s+".toRegex()).filter { it.isNotEmpty() }.size
