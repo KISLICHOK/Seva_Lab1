@@ -10,6 +10,11 @@ class TestClass (private var text: String){
         return text
     }
 
+    // Метод для получения текущего текста
+    fun getUpperText(): String {
+        return text
+    }
+
     // Метод для подсчета количества слов в тексте
     fun wordCount(): Int {
         return text.split("\\s+".toRegex()).filter { it.isNotEmpty() }.size
