@@ -10,8 +10,7 @@ class TestClass (private var text: String){
         return text
     }
 
-    // Метод для получения текущего текста
-    fun getUpperText(): String {
+    fun getLoverText(): String {
         return text
     }
 
